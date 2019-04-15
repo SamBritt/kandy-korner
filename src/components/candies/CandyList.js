@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 export default class CandyList extends Component {
     render(){
         return(
-            <section>
+            <section className = "wrapper">
             <h1>Candy List</h1>
                 {
                     this.props.candy.map(candyItem => 
