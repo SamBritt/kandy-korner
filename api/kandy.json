@@ -44,14 +44,22 @@
     "candy": [
         {
             "id": 1,
-            "name": "Dove"
+            "candyTypeId": 1,
+            "name": "Hershey's"
         },
         {
             "id": 2,
-            "name": "Twizzler"
+            "candyTypeId": 1,
+            "name": "Dove"
         },
         {
             "id": 3,
+            "candyTypeId": 2,
+            "name": "Twizzler"
+        },
+        {
+            "id": 4,
+            "candyTypeId": 3,
             "name": "Salt Water Taffy"
         }
     ]
