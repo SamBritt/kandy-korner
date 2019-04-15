@@ -28,6 +28,17 @@ export default class KandyKorner extends Component {
             .then(candyType => newState.candyType = candyType)
             .then(() => this.setState(newState))
     }
+    removeCandy = id => {
+        return fetch(`http://localHost:5002/candy/${id}`, {
+            method: "DELETE"
+        })
+        .then(e => e.json())
+        .then(() => fetch(`http://localHost:5002/candy`))
+        .then(e => e.json())
+        .then(candy => this.setState({
+            candy: candy
+        }))
+    }
 
     render() {
         return (
@@ -39,7 +50,8 @@ export default class KandyKorner extends Component {
                     return <EmployeeList employees={this.state.employees} />
                 }} />
                 <Route path="/candy" render={(props) => {
-                    return <CandyList candy={this.state.candy} 
+                    return <CandyList removeCandy={this.removeCandy}
+                    candy={this.state.candy} 
                     candyType={this.state.candyType} />
                 }} />
             </React.Fragment>

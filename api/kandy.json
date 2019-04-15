@@ -1,66 +1,61 @@
 {
-    "locations": [
-        {
-            "id": 1,
-            "name": "Delaware"
-        },
-        {
-            "id": 2,
-            "name": "Tennessee"
-        },
-        {
-            "id": 3,
-            "name": "Wisconsin"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Sam Britt"
-        },
-        {
-            "id": 2,
-            "name": "John Wick"
-        },
-        {
-            "id": 3,
-            "name": "Jones McJoneson"
-        }
-    ],
-    "candyType": [
-        {
-            "id": 1,
-            "type": "Chocolate"
-        },
-        {
-            "id": 2,
-            "type": "Licorice"
-        },
-        {
-            "id": 3,
-            "type": "Taffy"
-        }
-    ],
-    "candy": [
-        {
-            "id": 1,
-            "candyTypeId": 1,
-            "name": "Hershey's"
-        },
-        {
-            "id": 2,
-            "candyTypeId": 1,
-            "name": "Dove"
-        },
-        {
-            "id": 3,
-            "candyTypeId": 2,
-            "name": "Twizzler"
-        },
-        {
-            "id": 4,
-            "candyTypeId": 3,
-            "name": "Salt Water Taffy"
-        }
-    ]
+  "locations": [
+    {
+      "id": 1,
+      "name": "Delaware"
+    },
+    {
+      "id": 2,
+      "name": "Tennessee"
+    },
+    {
+      "id": 3,
+      "name": "Wisconsin"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Sam Britt"
+    },
+    {
+      "id": 2,
+      "name": "John Wick"
+    },
+    {
+      "id": 3,
+      "name": "Jones McJoneson"
+    }
+  ],
+  "candyType": [
+    {
+      "id": 1,
+      "type": "Chocolate"
+    },
+    {
+      "id": 2,
+      "type": "Licorice"
+    },
+    {
+      "id": 3,
+      "type": "Taffy"
+    }
+  ],
+  "candy": [
+    {
+      "id": 2,
+      "candyTypeId": 1,
+      "name": "Dove"
+    },
+    {
+      "id": 3,
+      "candyTypeId": 2,
+      "name": "Twizzler"
+    },
+    {
+      "id": 4,
+      "candyTypeId": 3,
+      "name": "Salt Water Taffy"
+    }
+  ]
 }
