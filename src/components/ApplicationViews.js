@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import StoreList from './stores/StoreList'
 import EmployeeList from './employees/EmployeeList';
 import CandyList from './candies/CandyList';
+import ResourceManager from '../modules/ResourceManager'
 
 export default class KandyKorner extends Component {
     state = {
@@ -14,17 +15,13 @@ export default class KandyKorner extends Component {
     componentDidMount() {
         const newState = {}
 
-        fetch("http://localhost:5002/locations")
-            .then(r => r.json())
+        ResourceManager.getAll("locations")
             .then(stores => newState.stores = stores)
-            .then(() => fetch("http://localhost:5002/candy"))
-            .then(r => r.json())
+            .then(() => ResourceManager.getAll("candy"))
             .then(candy => newState.candy = candy)
-            .then(() => fetch("http://localhost:5002/employees"))
-            .then(r => r.json())
+            .then(() => ResourceManager.getAll("employees"))
             .then(employees => newState.employees = employees)
-            .then(() => fetch("http://localhost:5002/candyType"))
-            .then(r => r.json())
+            .then(() => ResourceManager.getAll("candyType"))
             .then(candyType => newState.candyType = candyType)
             .then(() => this.setState(newState))
     }
@@ -32,12 +29,11 @@ export default class KandyKorner extends Component {
         return fetch(`http://localHost:5002/candy/${id}`, {
             method: "DELETE"
         })
-        .then(e => e.json())
-        .then(() => fetch(`http://localHost:5002/candy`))
-        .then(e => e.json())
-        .then(candy => this.setState({
-            candy: candy
-        }))
+            .then(e => e.json())
+            .then(() => ResourceManager.getAll("candy"))
+            .then(candy => this.setState({
+                candy: candy
+            }))
     }
 
     render() {
@@ -51,8 +47,8 @@ export default class KandyKorner extends Component {
                 }} />
                 <Route path="/candy" render={(props) => {
                     return <CandyList removeCandy={this.removeCandy}
-                    candy={this.state.candy} 
-                    candyType={this.state.candyType} />
+                        candy={this.state.candy}
+                        candyType={this.state.candyType} />
                 }} />
             </React.Fragment>
         );
