@@ -13,20 +13,7 @@
       "name": "Wisconsin"
     }
   ],
-  "employees": [
-    {
-      "id": 1,
-      "name": "Sam Britt"
-    },
-    {
-      "id": 2,
-      "name": "John Wick"
-    },
-    {
-      "id": 3,
-      "name": "Jones McJoneson"
-    }
-  ],
+  "employees": [],
   "candyType": [
     {
       "id": 1,
@@ -42,21 +29,6 @@
     }
   ],
   "candy": [
-    {
-      "id": 5,
-      "candyTypeId": 1,
-      "name": "Hershey's"
-    },
-    {
-      "id": 6,
-      "candyTypeId": 1,
-      "name": "M&M's"
-    },
-    {
-      "id": 7,
-      "candyTypeId": 2,
-      "name": "Off-brand Twizzlers"
-    },
     {
       "id": 8,
       "candyTypeId": 2,

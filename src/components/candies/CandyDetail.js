@@ -9,7 +9,7 @@ export default class CandyDetail extends Component {
     render() {
         return (
             <React.Fragment>
-                <section>
+                <section className = "wrapper">
                     <div key = {this.props.candy.id}>
                         <h4>
                             {this.props.candy.name}
@@ -18,7 +18,7 @@ export default class CandyDetail extends Component {
                             () => {
                                 this.setState(
                                     {saveDisabled : true},
-                                    () => this.props.removeCandy(this.props.candy.id)
+                                    () => this.props.removeCandy("candy", this.props.candy.id)
                                 )
                             }
                         } disabled = {this.state.saveDisabled}

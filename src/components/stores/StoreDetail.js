@@ -16,7 +16,8 @@ export default class StoreDetail extends Component {
                         <button onClick = {
                             () => {
                                 this.setState(
-                                    {saveDisabled : true}
+                                    {saveDisabled : true},
+                                    () => this.props.removeLocation("locations", this.props.location.id)
                                 )
                             }
                         } disabled = {this.state.saveDisabled}
