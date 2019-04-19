@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 export default class CandyList extends Component {
     render() {
@@ -8,7 +9,7 @@ export default class CandyList extends Component {
                 {
                     this.props.candy.map(candyItem =>
                         <div key={candyItem.id}>
-                            {candyItem.name}
+                            <Link className = "nav-link" to = {`/candy/${candyItem.id}`}>{candyItem.name}</Link>
                             { } --- { }
                             {
                                 this.props.candyType.find(chooseCandyType => candyItem.candyTypeId === chooseCandyType.id).type

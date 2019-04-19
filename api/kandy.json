@@ -43,9 +43,29 @@
   ],
   "candy": [
     {
-      "id": 4,
-      "candyTypeId": 3,
-      "name": "Salt Water Taffy"
+      "id": 5,
+      "candyTypeId": 1,
+      "name": "Hershey's"
+    },
+    {
+      "id": 6,
+      "candyTypeId": 1,
+      "name": "M&M's"
+    },
+    {
+      "id": 7,
+      "candyTypeId": 2,
+      "name": "Off-brand Twizzlers"
+    },
+    {
+      "id": 8,
+      "candyTypeId": 2,
+      "name": "Twizzlers"
+    },
+    {
+      "id": 9,
+      "candyTypeId": 1,
+      "name": "Dove"
     }
   ]
 }
